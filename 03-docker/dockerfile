@@ -1,8 +1,8 @@
 FROM node
+ENV FILE_NAME='message.txt'
 WORKDIR /app
 COPY *.js* ./
 RUN npm ci
 RUN mkdir public
-RUN touch public/message.txt
 EXPOSE 5000
 CMD ["node", "index.js"]

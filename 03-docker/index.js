@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 
 const publicPath = path.join(__dirname, 'public');
-const messageFile = path.join(publicPath, 'message.txt');
+const messageFile = path.join(publicPath, process.env.FILE_NAME || 'message.txt');
 const port = 5000;
 const app = express();
 
